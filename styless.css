@@ -1,7 +1,7 @@
 @font-face {
     font-style: normal;
     font-weight: 500;
-    scr: url("LabGrotesque-Regular") format('woff2');
+    src: url('LabGrotesque-Medium.woff2') format('woff2'); /* Опечатка не scr а src (source) и расширение файла забыл*/
     font-family: 'LabGrotesque';
     font-display: swap;
 }
@@ -9,9 +9,18 @@
 @font-face {
     font-style: normal;
     font-weight: 400; /*500*/
-    scr: url('LabGrotesque-Medium') format('woff2');
+    src: url('LabGrotesque-Regular.woff2') format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
+}
+
+/* Добавить ресеты, Нужно отменить дефолтный марджин еще других <h*> и у <p> */
+h1,
+h2,
+h3,
+p
+{
+    margin: 0;
 }
 
 body {
@@ -20,8 +29,8 @@ body {
     background-color: grey;
 }
 
-.model{
-    font-family: Arial;
+.model {
+    /*font-family: Arial; У заголовка шрифт LabGrotesque */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,16 +50,31 @@ body {
 }
 
 .title {
-    width: 235px;
-    height: 40px;
-    top: 32px;
-    left: 32px;
+    /* Это всё не нужно,
+       в верстке не хардкодятся значения высоты и ширины
+       (только в случае мелких деталей или же деталей которые не будут менять свой размер)
+       Мы же верстаем сайт под разные девайсы, представь заголовок with: 235px на iPhone SE1 где весь экран 320px)
+    */
+
+    /*width: 235px; */
+    /*height: 40px; */
+    /*top: 32px;*/
+    /*left: 32px;*/
+
+    /*
+        У заголовка не были определены значения и отступы
+    */
+
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
 .close {
     position: absolute;
-    font-size: 45px;
-    font-weight: 100;
+    /*font-size: 45px; Это зачем? у нас же векторная графика внутри  */
+    /*font-weight: 100; */
     height: 40px;
     width: 40px;
     background: none;
@@ -59,57 +83,100 @@ body {
     top: 16px;
 }
 
-h2{
-    margin: 0;
-}
 
 .btn{
-    position: absolute;
     background: none;
     border: none;
-    left: 32px;
-    top: 264px;
-    width: 76px;
-    height: 24px;
+
+    /* Вот так просто */
+    color: #EA0029;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+
+    /* Тоже ненужный хардкод */
+
+    /*position: absolute;*/
+    /*left: 32px;*/
+    /*top: 264px;*/
+    /*width: 76px;*/
+    /*height: 24px;*/
 }
 
+/* Зачем всё absolute? Абсолютное позиционирование
+   используется только когда нам нужно вырвать элемент из
+   основного  */
 .lay{
-    position: absolute;
-    width: 488px;
-    height: 72px;
-    top: 184px;
-    left: 32px;
+    /*position: absolute;*/
+    /*width: 488px;*/
+    /*height: 72px;*/
+    /*top: 184px;*/
+    /*left: 32px;*/
+
+    margin-bottom: 8px;
 }
 
-.lay2{
-    size: 14px;
-    width: 155px;
-    height: 24px;
-}
+/* Не нужно */
+/*.lay2{*/
+/*    size: 14px;*/
+/*    width: 155px;*/
+/*    height: 24px;*/
+/*}*/
 
 .my-input{
-    width: 488px;
-    height: 40px;
-    top: 32px;
+    /*width: 488px; Он же на всю ширину? */
+    width: 100%;
+
+    /*Можно просто паддинги и шрифт определить и оно само примерно встанет идеально пиксель в пиксель не нужно*/
+    /*height: 40px;*/
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    /*top: 32px;*/
     border-radius: 3px;
-    border: 1px;
-    border-color: #DFE3E6;
-    border-style: solid;
+
+    /*border: 1px;*/
+    /*border-color: #DFE3E6;*/
+    /*border-style: solid;*/
+    /* Shorthand */
+    border: 1px solid #DFE3E6;
 }
 
 .text{
-    width: 488px;
-    height: 72px;
-    top: 88px;
-    left: 32px;
+    /*width: 488px;*/
+    /*height: 72px;*/
+    /*top: 88px;*/
+    /*left: 32px;*/
+
+    /* Не хватает отступа внизу  */
+    margin-bottom: 24px;
+    /*margin: 0 0 24px;*/
     color: #808080;
+
+    /*
+        Тоже нет свойств шрифта
+
+    */
+
+    font-size: 14px;
+    line-height: 24px;
 }
 
-.my-input2{
-    width: 155px;
-    height: 24px;
+
+.label{
+    /* Так не нужно делать */
+    /*width: 155px;*/
+    /*height: 24px;*/
+
+    /* Просто отступ снизу нужно */
+    display: block;
+    margin-bottom: 8px;
 }
 
+/* Дальше ниже не смотрел нужно всё править*/
 .lay3{
     position: absolute;
     width: 290px;
