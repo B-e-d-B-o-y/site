@@ -20,12 +20,13 @@ body {
     background-color: grey;
 }
 
-
 .model{
+    font-family: Arial;
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 522px;
+    max-width: 552px;
+    height: 476px;
     width: 100%;
     margin-block: 10vh;
     background: white;
