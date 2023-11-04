@@ -1,7 +1,7 @@
 @font-face {
     font-style: normal;
     font-weight: 500;
-    scr: url("LabGrotesque-Regular") format('woff2');
+    src: url("LabGrotesque-Regular.woff2") format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-style: normal;
     font-weight: 400; /*500*/
-    scr: url('LabGrotesque-Medium') format('woff2');
+    src: url('LabGrotesque-Medium.woff2') format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
 }
@@ -20,12 +20,13 @@ body {
     background-color: grey;
 }
 
-
 .model{
+    font-family: LabGrotesque;
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 522px;
+    max-width: 552px;
+    height: 740px;
     width: 100%;
     margin-block: 10vh;
     background: white;
@@ -40,36 +41,43 @@ body {
 }
 
 .title {
-    width: 235px;
-    height: 40px;
-    top: 32px;
-    left: 32px;
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
 .close {
     position: absolute;
-    font-size: 45px;
-    font-weight: 100;
     height: 40px;
     width: 40px;
     background: none;
     border: none;
     right: 16px;
     top: 16px;
+    cursor: pointer;
 }
 
-h2{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+b{
     margin: 0;
 }
 
 .btn{
-    position: absolute;
+    padding: unset;
+    margin: auto;
     background: none;
     border: none;
-    left: 32px;
-    top: 264px;
-    width: 76px;
-    height: 24px;
+    color: #EA0029;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
 }
 
 .lay{
@@ -81,44 +89,43 @@ h2{
 }
 
 .lay2{
-    size: 14px;
-    width: 155px;
-    height: 24px;
+    margin-bottom: 8px;
 }
 
 .my-input{
-    width: 488px;
-    height: 40px;
-    top: 32px;
+    width: 100%;
     border-radius: 3px;
-    border: 1px;
-    border-color: #DFE3E6;
-    border-style: solid;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 1px solid #DFE3E6;
 }
 
 .text{
-    width: 488px;
-    height: 72px;
-    top: 88px;
-    left: 32px;
+    font-family: "Body";
+    margin-bottom: 24px;
     color: #808080;
+    font-size: 14px;
+    line-height: 24px;
 }
 
-.my-input2{
-    width: 155px;
-    height: 24px;
+.label{
+    display: block;
+    margin-bottom: 8px;
 }
 
 .lay3{
     position: absolute;
     width: 290px;
     height: 36px;
-    top: 312px;
+    top: 576px;
     left: 32px;
     border-radius: 50px;
 }
 
 .lay4{
+    font-size: 14px;
     width: 112px;
     height: 24px;
     top: 316px;
@@ -128,9 +135,12 @@ h2{
 .btn2{
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .btn3{
+    font-family: "Body";
+    font-size: 14px;
     background: none;
     border: none;
     width: 73px;
@@ -139,11 +149,14 @@ h2{
     left: 176px;
     border-radius: 50px;
     gap: 12px;
-    background: #DC3131;
+    background: #FF5E56;
     color: white;
+    cursor: pointer;
 }
 
 .btn4{
+    font-family: "Body";
+    font-size: 14px;
     background: none;
     border: none;
     width: 57px;
@@ -153,13 +166,64 @@ h2{
     border-radius: 50px;
     gap: 12px;
     background: #EEF0F2;
+    cursor: pointer;
 }
 
 .btn5{
-    position: absolute;
-    top: 388px;
-    left: 32px;
-    background: none;
     border: none;
+    background: none;
+    position: absolute;
+    width: 488px;
+    height: 56px;
+    top: 652px;
+    left: 32px;
+    border-radius: 6px;
+    gap: 10px;
+    background-color: #FF5E56;
+    box-shadow: 0px 0px 24px 0px #EA002954;
+    font-family: Caption;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
 
+.lay5{
+    font-size: 14px;
+    width: 295px;
+    height: 24px;
+    top: 304px;
+    left: 32px;
+}
+
+.oneyears{
+    position: sticky;
+    font-weight: 400;
+    height: 24px;
+    top: 344px;
+    left: 32px;
+    font-size: 14px;
+}
+
+.checkbox{
+    cursor: pointer;
+    background-color: #FF5E56;
+    width: 20px;
+    height: 20px;
+    border: 1px;
+
+}
+
+.Rectangle{
+    margin: auto;
+    width: 488px;
+    height: 1px;
+    border-color: #DFE3E6;
+    border: 10px;
+;
+
+}
+
+dl {
+    margin: 0;
+    padding: 24px 0 0 0;
 }
