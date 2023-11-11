@@ -1,6 +1,6 @@
 @font-face {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     src: url("LabGrotesque-Regular.woff2") format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
@@ -8,10 +8,16 @@
 
 @font-face {
     font-style: normal;
-    font-weight: 400; /*500*/
+    font-weight: 500;
     src: url('LabGrotesque-Medium.woff2') format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -20,13 +26,21 @@ body {
     background-color: grey;
 }
 
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
 .model{
-    font-family: LabGrotesque;
     position: relative;
     display: flex;
     flex-direction: column;
     max-width: 552px;
-    height: 740px;
     width: 100%;
     margin-block: 10vh;
     background: white;
@@ -35,7 +49,6 @@ body {
 }
 
 .overlay {
-    position: static;
     display: flex;
     justify-content: center;
 }
@@ -44,7 +57,8 @@ body {
     margin-bottom: 16px;
     font-size: 28px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: 1.42;
+    font-style: normal;
 }
 
 .close {
@@ -56,16 +70,6 @@ body {
     right: 16px;
     top: 16px;
     cursor: pointer;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-b{
-    margin: 0;
 }
 
 .btn{
@@ -80,13 +84,6 @@ b{
     cursor: pointer;
 }
 
-.lay{
-    position: absolute;
-    width: 488px;
-    height: 72px;
-    top: 184px;
-    left: 32px;
-}
 
 .lay2{
     margin-bottom: 8px;
@@ -95,7 +92,8 @@ b{
 .my-input{
     width: 100%;
     border-radius: 3px;
-    padding: 8px 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -103,33 +101,26 @@ b{
 }
 
 .text{
-    font-family: "Body";
-    margin-bottom: 24px;
     color: #808080;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.71;
+    font-style: normal;
+    padding-right: 32px;
 }
 
 .label{
+    padding-top: 24px;
     display: block;
     margin-bottom: 8px;
 }
 
 .lay3{
-    position: absolute;
-    width: 290px;
-    height: 36px;
-    top: 576px;
-    left: 32px;
+    margin-top: 39px;
     border-radius: 50px;
 }
 
 .lay4{
     font-size: 14px;
-    width: 112px;
-    height: 24px;
-    top: 316px;
-    left: 32px;
 }
 
 .btn2{
@@ -139,91 +130,96 @@ b{
 }
 
 .btn3{
-    font-family: "Body";
+    margin-left: 44px;
     font-size: 14px;
     background: none;
     border: none;
-    width: 73px;
-    height: 36px;
-    top: 312px;
-    left: 176px;
     border-radius: 50px;
     gap: 12px;
     background: #FF5E56;
     color: white;
     cursor: pointer;
+    display: inline-flex;
+    padding: 6px 12px;
+    align-items: center;
 }
 
 .btn4{
-    font-family: "Body";
+    margin-left: 16px;
     font-size: 14px;
     background: none;
     border: none;
-    width: 57px;
-    height: 36px;
-    top: 312px;
-    left: 265px;
     border-radius: 50px;
     gap: 12px;
     background: #EEF0F2;
     cursor: pointer;
+    display: inline-flex;
+    padding: 6px 12px;
+    align-items: center;
 }
 
 .btn5{
+    margin-left: 32px;
+    margin-right: 32px;
     border: none;
-    background: none;
-    position: absolute;
-    width: 488px;
-    height: 56px;
-    top: 652px;
-    left: 32px;
     border-radius: 6px;
     gap: 10px;
     background-color: #FF5E56;
     box-shadow: 0px 0px 24px 0px #EA002954;
-    font-family: Caption;
     font-size: 16px;
     color: white;
     cursor: pointer;
+    padding: 16px;
+    margin-top: 40px;
 }
 
 .lay5{
+    padding-top: 16px;
     font-size: 14px;
-    width: 295px;
-    height: 24px;
-    top: 304px;
-    left: 32px;
+    padding-bottom: 16px;
 }
 
-.oneyears{
-    position: sticky;
-    font-weight: 400;
-    height: 24px;
-    top: 344px;
-    left: 32px;
-    font-size: 14px;
-}
-
-.checkbox{
+.checkbox {
+    display: flex;
+    position: relative;
     cursor: pointer;
-    background-color: #FF5E56;
+    font-weight: 400;
+    font-size: 14px;
+    border-bottom: 1px solid #DFE3E6;
+    padding: 16px 0;
+}
+
+.checkmark {
+    position: relative;
     width: 20px;
     height: 20px;
-    border: 1px;
-
+    background-color: white;
+    border-radius: 5px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkNoZWNrYm94X25vcm1hbCIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzFfMTExKSI+CjxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik0wLjUgNkMwLjUgMi45NjI0MyAyLjk2MjQzIDAuNSA2IDAuNUgxNEMxNy4wMzc2IDAuNSAxOS41IDIuOTYyNDMgMTkuNSA2VjE0QzE5LjUgMTcuMDM3NiAxNy4wMzc2IDE5LjUgMTQgMTkuNUg2QzIuOTYyNDMgMTkuNSAwLjUgMTcuMDM3NiAwLjUgMTRWNloiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNERkUzRTYiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xXzExMSI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K");
 }
 
-.Rectangle{
-    margin: auto;
-    width: 488px;
-    height: 1px;
-    border-color: #DFE3E6;
-    border: 10px;
-;
-
+.checkmark::before {
+    transition: opacity 100ms ease-in;
+    opacity: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9Im1kaV9kb25lIiBjbGlwLXBhdGg9InVybCgjY2xpcDBfMV8xMDMpIj4KPGcgaWQ9IlZlY3RvciI+CjxwYXRoIGQ9Ik0wLjUgNkMwLjUgMi45NjI0MyAyLjk2MjQzIDAuNSA2IDAuNUgxNEMxNy4wMzc2IDAuNSAxOS41IDIuOTYyNDMgMTkuNSA2VjE0QzE5LjUgMTcuMDM3NiAxNy4wMzc2IDE5LjUgMTQgMTkuNUg2QzIuOTYyNDMgMTkuNSAwLjUgMTcuMDM3NiAwLjUgMTRWNloiIGZpbGw9IiNGRjVFNTYiLz4KPHBhdGggZD0iTTAuNSA2QzAuNSAyLjk2MjQzIDIuOTYyNDMgMC41IDYgMC41SDE0QzE3LjAzNzYgMC41IDE5LjUgMi45NjI0MyAxOS41IDZWMTRDMTkuNSAxNy4wMzc2IDE3LjAzNzYgMTkuNSAxNCAxOS41SDZDMi45NjI0MyAxOS41IDAuNSAxNy4wMzc2IDAuNSAxNFY2WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzFfMTAzKSIvPgo8cGF0aCBkPSJNMC41IDZDMC41IDIuOTYyNDMgMi45NjI0MyAwLjUgNiAwLjVIMTRDMTcuMDM3NiAwLjUgMTkuNSAyLjk2MjQzIDE5LjUgNlYxNEMxOS41IDE3LjAzNzYgMTcuMDM3NiAxOS41IDE0IDE5LjVINkMyLjk2MjQzIDE5LjUgMC41IDE3LjAzNzYgMC41IDE0VjZaIiBzdHJva2U9IiNGRjVFNTYiLz4KPHBhdGggZD0iTTAuNSA2QzAuNSAyLjk2MjQzIDIuOTYyNDMgMC41IDYgMC41SDE0QzE3LjAzNzYgMC41IDE5LjUgMi45NjI0MyAxOS41IDZWMTRDMTkuNSAxNy4wMzc2IDE3LjAzNzYgMTkuNSAxNCAxOS41SDZDMi45NjI0MyAxOS41IDAuNSAxNy4wMzc2IDAuNSAxNFY2WiIgc3Ryb2tlPSJ1cmwoI3BhaW50MV9saW5lYXJfMV8xMDMpIi8+CjwvZz4KPHBhdGggaWQ9IlZlY3Rvcl8yIiBkPSJNNy40NTQ1NSAxMy43MDE1TDQuMTEzNjQgMTAuMjUzN0wzIDExLjQwM0w3LjQ1NDU1IDE2TDE3IDYuMTQ5MjVMMTUuODg2NCA1TDcuNDU0NTUgMTMuNzAxNVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xXzEwMyIgeDE9IjIwIiB5MT0iMC43OTg1NjMiIHgyPSItNy4zODEwMiIgeTI9IjcuOTU2NzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0RDMzEzMSIvPgo8c3RvcCBvZmZzZXQ9IjAuOTMyMjkyIiBzdG9wLWNvbG9yPSIjRkY0RjRGIiBzdG9wLW9wYWNpdHk9IjAiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzFfMTAzIiB4MT0iMjAiIHkxPSIwLjc5ODU2MyIgeDI9Ii03LjM4MTAyIiB5Mj0iNy45NTY3OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjREMzMTMxIi8+CjxzdG9wIG9mZnNldD0iMC45MzIyOTIiIHN0b3AtY29sb3I9IiNGRjRGNEYiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzFfMTAzIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=");
 }
 
-dl {
-    margin: 0;
-    padding: 24px 0 0 0;
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-input:checked ~ .checkmark::before {
+    opacity: 1;
+}
+
+.checkbox-text {
+    margin-bottom: 8px;
+    margin-left: 12px;
+    user-select: none;
 }
