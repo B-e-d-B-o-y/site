@@ -11,7 +11,9 @@
 </head>
 <body>
 <div class="overlay" id="form">
+
     <div class="model">
+
         <h3 class="title"> Налоговый вычет</h3>
 
         <p class="text">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
@@ -28,33 +30,39 @@
             </legend>
             <input class="my-input" type="text" id="my_input" placeholder="Введите данные">
 
-            <button class="btn" type="button" id="calcbutton">
+            <button class="calculate" type="button" id="calcbutton">
                 <b>Рассчитать</b>
             </button>
 
-            <h5 class="lay5">Итого можете внести в качестве досрочных:</h5>
+            <h5 class="early">Итого можете внести в качестве досрочных:</h5>
 
-            <div class="checkboxes" id="checkboxes">
+            <div id="checkboxes">
 
 
             </div>
 
-            <div class="lay3" id="buttons">
-                <b class="lay4">Что уменьшаем?</b>
-                <button class="btn3" type="button" data-tupe="payment">
+            <div class="label_block" id="buttons">
+                <b class="reducing">Что уменьшаем?</b>
+
+                <button class="payment_button" type="button" data-tupe="payment">
                     Платёж
                 </button>
-                <button class="btn4" type="button" data-tupe="period">
+
+                <button class="term_button" type="button" data-tupe="period">
                     Срок
                 </button>
             </div>
         </fieldset>
 
-        <button type="submit" class="btn5" id="submit">
+        <button type="submit" class="add_button" id="submit">
             Добавить
         </button>
+
     </div>
+
 </div>
+
 <script src="index.js"></script>
+
 </body>
 </html>

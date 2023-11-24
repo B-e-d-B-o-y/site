@@ -14,6 +14,15 @@
     font-display: swap;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
 fieldset {
     border: none;
     margin: 0;
@@ -24,16 +33,6 @@ body {
     font-size: 16px;
     font-family: LabGrotesque, Arial, Helvetica, sans-serif;
     background-color: grey;
-}
-
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin: 0;
 }
 
 .model{
@@ -72,7 +71,7 @@ h5 {
     cursor: pointer;
 }
 
-.btn{
+.calculate{
     padding: unset;
     margin: auto;
     background: none;
@@ -82,11 +81,6 @@ h5 {
     font-weight: 500;
     line-height: 24px;
     cursor: pointer;
-}
-
-
-.lay2{
-    margin-bottom: 8px;
 }
 
 .my-input{
@@ -114,22 +108,16 @@ h5 {
     margin-bottom: 8px;
 }
 
-.lay3{
+.label_block{
     margin-top: 39px;
     border-radius: 50px;
 }
 
-.lay4{
+.reducing{
     font-size: 14px;
 }
 
-.btn2{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.btn3{
+.payment_button{
     margin-left: 44px;
     font-size: 14px;
     background: none;
@@ -144,7 +132,7 @@ h5 {
     align-items: center;
 }
 
-.btn4{
+.term_button{
     margin-left: 16px;
     font-size: 14px;
     background: none;
@@ -158,7 +146,7 @@ h5 {
     align-items: center;
 }
 
-.btn5{
+.add_button{
     border: none;
     border-radius: 6px;
     gap: 10px;
@@ -171,7 +159,7 @@ h5 {
     margin-top: 40px;
 }
 
-.lay5{
+.early{
     padding-top: 16px;
     font-size: 14px;
     padding-bottom: 16px;
@@ -220,4 +208,15 @@ h5 {
     margin-bottom: 8px;
     margin-left: 12px;
     user-select: none;
+}
+
+.money{
+    line-height: 24px;
+    color: #000000;
+}
+.year{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #808080;
 }
