@@ -72,6 +72,7 @@ body {
 }
 
 .calculate{
+    margin-top: 8px;
     padding: unset;
     margin: auto;
     background: none;
@@ -92,6 +93,7 @@ body {
     font-weight: 400;
     line-height: 24px;
     border: 1px solid #DFE3E6;
+    padding-left: 10px;
 }
 
 .text{
@@ -109,7 +111,7 @@ body {
 }
 
 .label_block{
-    margin-top: 39px;
+    margin-top: 24px;
     border-radius: 50px;
 }
 
@@ -130,9 +132,11 @@ body {
     display: inline-flex;
     padding: 6px 12px;
     align-items: center;
+    line-height: 24px;
 }
 
 .term_button{
+    line-height: 24px;
     margin-left: 16px;
     font-size: 14px;
     background: none;
@@ -157,6 +161,7 @@ body {
     cursor: pointer;
     padding: 16px 0px;
     margin-top: 40px;
+    line-height: 150%;
 }
 
 .early{
@@ -211,6 +216,8 @@ body {
 }
 
 .money{
+    margin-left: 12px;
+    margin-right: 5px;
     line-height: 24px;
     color: #000000;
 }
@@ -219,4 +226,16 @@ body {
     font-weight: 400;
     line-height: 24px;
     color: #808080;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
 }

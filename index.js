@@ -31,14 +31,13 @@ $submit.addEventListener('click', (event) => {
 const createCheckbox = (year, value) => {
     return `<label class="checkbox">
                     <input type="checkbox" class="checkbox-input" />
+                    <span class = "checkmark"></span>
                     <span class = "money">${value}</span>
                     <span class = "year">${year}</span>
-                    <span class = "checkmark"></span>
            </label>`
 }
 
 const calculateTax = (event) => {
-    // TODO:
     const payments = [
 
         {value: '78 000 рублей', year: 'в 1-ый год'},
@@ -63,5 +62,13 @@ const calculateTax = (event) => {
 $calcButton.addEventListener('click', calculateTax)
 
 $checkboxesContainer.addEventListener('click',(event) => {
-    // TODO:
+        console.log("Checkbox is checked..");
+    })
+
+const invalidChars = ['e'];
+
+$input.addEventListener('keydown', (event) => {
+    if (invalidChars.includes(event.key)) {
+        event.preventDefault();
+    }
 })
